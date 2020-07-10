@@ -1,7 +1,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
       <div class="copyright text-center my-auto">
-        <span>Copyright &copy; SHOE-A-CHILD NIGERIA, 2020</span>
+        <span>Copyright &copy; GIGS NG, 2020</span>
       </div>
     </div>
 </footer>

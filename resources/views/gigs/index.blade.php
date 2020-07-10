@@ -27,7 +27,7 @@
                                     <td>{{$gig->role}}</td>
                                     <td>{{$gig->company}}</td>
                                     <td>{{$gig->created_at}}</td>
-                                    <td>{{number_format($gig->MaxSalary, 2)}}</td>
+                                    <td>{{number_format($gig->MaxSalary, 1)}}</td>
                                     <td>
                                         {{-- <a href="#" class="btn btn-sm btn-primary">Edit gig</a> --}}
                                         <a href="#" class="btn btn-sm btn-danger">Delete gig</a> <br>

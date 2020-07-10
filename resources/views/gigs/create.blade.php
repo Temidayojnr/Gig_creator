@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <hr>
-                    <h6>Location</h6>
+                    <h6><strong>Location</strong></h6>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <hr>
-                    <h6>Salary</h6>
+                    <h6><strong>Salary</strong></h6>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
