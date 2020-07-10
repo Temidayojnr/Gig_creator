@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gig;
+use App\Company;
 use Illuminate\Http\Request;
 
 class GigController extends Controller
@@ -15,14 +16,15 @@ class GigController extends Controller
 
     public function create()
     {
-        return view('gigs.create');
+        $company = Company::all();
+        return view('gigs.create', compact('company'));
     }
 
     public function createGig(Request $request)
     {
         $gig = new Gig();
         $gig->role = $request->role;
-        $gig->company = $request->company;
+        $gig->companyID = $request->companyID;
         $gig->country = $request->country;
         $gig->state = $request->state;
         $gig->Address = $request->Address;

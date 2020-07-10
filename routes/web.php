@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('gigs.dashboard');
-});
+// Route::get('/', function () {
+//     return view('gigs.dashboard');
+// });
+Route::get('/', 'HomeController@index');
 
 Route::get('/gigs', 'GigController@index')->name('Gigs');
 
@@ -25,7 +26,15 @@ Route::post('/add-gig', 'GigController@createGig')->name('AddGig');
 
 Route::put('/updat-gig', 'GigController@updateGig')->name('UpdateGig');
 
-Route::delete('/delete-gig', 'GigController@deleteGig')->name('DeleteGig');
+Route::get('/delete-gig/{id}', 'GigController@deleteGig')->name('DeleteGig');
+
+Route::get('/companies', 'CompanyController@index')->name('CompanyPage');
+
+Route::get('/companies/create', 'CompanyController@create');
+
+Route::post('/add-comapny', 'CompanyController@createCompany')->name('AddCompany');
+
+Route::get('/delete-company/{id}', 'CompanyController@deleteCompany')->name('DeleteCompany');
 
 Auth::routes();
 

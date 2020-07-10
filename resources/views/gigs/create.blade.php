@@ -18,8 +18,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" name="company" class="form-control" placeholder="company">
+                                <label for="companyID">Company</label>
+                                <select name="companyID" id="" class="form-control">
+                                    <option value="">Select Company</option>
+                                    @foreach ($company as $item)
+                                        <option value="{{$item->id}}">{{$item->name ?? ''}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                     </div>

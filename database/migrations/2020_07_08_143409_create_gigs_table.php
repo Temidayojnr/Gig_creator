@@ -16,7 +16,7 @@ class CreateGigsTable extends Migration
         Schema::create('gigs', function (Blueprint $table) {
             $table->id();
             $table->string('role');
-            $table->string('company');
+            $table->integer('companyID');
             $table->string('country');
             $table->string('state');
             $table->string('Address');

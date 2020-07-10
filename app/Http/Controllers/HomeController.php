@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Gig;
+use App\Company;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $gigs = Gig::all();
+        $gigsCount = Gig::all()->count();
+        $companyCount = Company::all()->count();
+        return view('gigs.dashboard', compact('gigs','gigsCount', 'companyCount'));
     }
 }
